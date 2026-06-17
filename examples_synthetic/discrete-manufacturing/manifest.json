@@ -1,0 +1,39 @@
+{
+  "example": "discrete-manufacturing",
+  "toolkit_version": "1.3.0",
+  "survey_schema_version": "3.0.0",
+  "total_instrument_items": 305,
+  "improvement_workflow_included": true,
+  "reference_only_zh": "全部公司、人员和收益数据均为匿名或合成数据，仅供参考。",
+  "reference_only_en": "All company, respondent, and benefit data are anonymised or synthetic and for reference only.",
+  "profile": "examples/complete/discrete-manufacturing/company_profile.json",
+  "responses": "examples/complete/discrete-manufacturing/synthetic_technician_responses.csv",
+  "analysis": {
+    "json": "examples/complete/discrete-manufacturing/output/pcio_analysis_results.json",
+    "excel": "examples/complete/discrete-manufacturing/output/pcio_spss_style_tables.xlsx",
+    "tables": "examples/complete/discrete-manufacturing/output/tables"
+  },
+  "report": "examples/complete/discrete-manufacturing/output/PCIO-Implementation-Case-Report-bilingual.md",
+  "decision_support": {
+    "json": "examples/complete/discrete-manufacturing/output/pcio_decision_support.json",
+    "markdown": "examples/complete/discrete-manufacturing/output/PCIO-Risk-KPI-ROI-Summary-bilingual.md",
+    "excel": "examples/complete/discrete-manufacturing/output/pcio_risk_kpi_roi.xlsx"
+  },
+  "analysis_zip": "examples/complete/discrete-manufacturing/PCIO-Complete-Analysis-Package.zip",
+  "example_zip": "examples/complete/discrete-manufacturing/PCIO-Complete-Example-Package.zip",
+  "valid_responses": 64,
+  "scores": {
+    "P": 2.776721014492754,
+    "C": 2.7857142857142856,
+    "I": 2.576800847457627,
+    "O": 2.6725127551020407,
+    "H": 2.861530172413793,
+    "PERF_OVERALL": 3.0625
+  },
+  "selected_risks": 10,
+  "recommended_kpis": 8,
+  "payback_range_months": {
+    "optimistic": 18.0,
+    "conservative": 48.0
+  }
+}
