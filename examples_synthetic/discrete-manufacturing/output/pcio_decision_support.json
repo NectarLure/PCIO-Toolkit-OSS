@@ -1,0 +1,708 @@
+{
+  "decision_support_version": "4.0.0",
+  "generated_at_utc": "2026-06-11T09:45:13.825412+00:00",
+  "profile": {
+    "project_code": "DISC-PILOT-01",
+    "company_name": "匿名装备制造企业",
+    "company_size": "small",
+    "employee_count": 76,
+    "industry": "machinery",
+    "production_type": "job_shop",
+    "line_name": "机加工与装配单元",
+    "region": "North China",
+    "pain_points": [
+      "quality_defects",
+      "schedule_changeover",
+      "manual_records",
+      "collaboration"
+    ],
+    "current_systems": [
+      "paper",
+      "excel",
+      "plc"
+    ],
+    "automation_level": "local",
+    "pilot_scope": "三台关键加工设备和一个装配班组",
+    "profile_owner": "生产主管"
+  },
+  "risk": {
+    "method": {
+      "likelihood": "1-4 from the weakest relevant PCIO/H score, adjusted by profile drivers",
+      "impact": "1-4 from pain-point relevance, process criticality, and company scale",
+      "score": "likelihood × impact",
+      "selection": "top two risks per category plus two highest remaining risks",
+      "bands": "1-3 low; 4-7 moderate; 8-11 high; 12-16 critical"
+    },
+    "lowest_pcio_layer": "I",
+    "risks": [
+      {
+        "risk_id": "O03",
+        "category": "organisational",
+        "category_zh": "组织",
+        "category_en": "Organisational",
+        "title_zh": "跨班组或跨部门流程未同步调整",
+        "title_en": "Cross-shift or cross-department process not changed with the tool",
+        "pcio_layers": [
+          "H",
+          "I"
+        ],
+        "driver_matches": [
+          "collaboration",
+          "manual_records",
+          "schedule_changeover"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Do/Act",
+        "mitigation_zh": "同步修订交接班、纸质记录、异常会议和标准作业，避免数字化与旧流程并行重复。",
+        "mitigation_en": "Update handover, paper records, exception meetings, and standard work to avoid duplicate old and digital processes.",
+        "relevance_score": 21,
+        "priority_rank": 1,
+        "highlighted": true
+      },
+      {
+        "risk_id": "T03",
+        "category": "technical",
+        "category_zh": "技术",
+        "category_en": "Technical",
+        "title_zh": "设备、批次、工单和异常语义不一致",
+        "title_en": "Inconsistent asset, batch, work-order, and exception semantics",
+        "pcio_layers": [
+          "I"
+        ],
+        "driver_matches": [
+          "collaboration",
+          "manual_records"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Plan/Check",
+        "mitigation_zh": "建立轻量数据字典、唯一编码和 KPI 公式；每次接口变更执行对账。",
+        "mitigation_en": "Create a lightweight data dictionary, unique identifiers, and KPI formulas; reconcile every interface change.",
+        "relevance_score": 19,
+        "priority_rank": 2,
+        "highlighted": true
+      },
+      {
+        "risk_id": "E01",
+        "category": "external",
+        "category_zh": "外部",
+        "category_en": "External",
+        "title_zh": "供应商锁定、封闭协议或数据不可迁移",
+        "title_en": "Vendor lock-in, closed protocols, or non-portable data",
+        "pcio_layers": [
+          "C",
+          "I"
+        ],
+        "driver_matches": [
+          "manual_records"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Plan",
+        "mitigation_zh": "优先开放协议、可导出数据和接口验收条款；保留替代供应商清单。",
+        "mitigation_en": "Prefer open protocols, exportable data, and interface acceptance clauses; retain alternative suppliers.",
+        "relevance_score": 17,
+        "priority_rank": 3,
+        "highlighted": true
+      },
+      {
+        "risk_id": "H01",
+        "category": "workforce",
+        "category_zh": "人力",
+        "category_en": "Workforce",
+        "title_zh": "一线人员培训、使用能力或参与度不足",
+        "title_en": "Insufficient frontline training, capability, or participation",
+        "pcio_layers": [
+          "H"
+        ],
+        "driver_matches": [
+          "collaboration",
+          "manual_records"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Do/Check",
+        "mitigation_zh": "采用岗位化微培训、现场辅导和超级用户机制，培训后用真实任务验证。",
+        "mitigation_en": "Use role-based micro-training, floor coaching, and super-users; verify learning with real tasks.",
+        "relevance_score": 17,
+        "priority_rank": 4,
+        "highlighted": true
+      },
+      {
+        "risk_id": "O01",
+        "category": "organisational",
+        "category_zh": "组织",
+        "category_en": "Organisational",
+        "title_zh": "试点边界、责任人和异常关闭权责不清",
+        "title_en": "Unclear pilot boundary, ownership, and exception closure authority",
+        "pcio_layers": [
+          "I",
+          "H"
+        ],
+        "driver_matches": [
+          "collaboration"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Plan",
+        "mitigation_zh": "定义单一试点边界、RACI、异常升级路径和联合签字门槛。",
+        "mitigation_en": "Define one pilot boundary, RACI, escalation path, and joint approval gates.",
+        "relevance_score": 17,
+        "priority_rank": 5,
+        "highlighted": false
+      },
+      {
+        "risk_id": "O02",
+        "category": "organisational",
+        "category_zh": "组织",
+        "category_en": "Organisational",
+        "title_zh": "KPI 口径或收益基线不可复算",
+        "title_en": "Non-reproducible KPI definitions or benefit baseline",
+        "pcio_layers": [
+          "I",
+          "O"
+        ],
+        "driver_matches": [
+          "quality_defects"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Plan/Check",
+        "mitigation_zh": "冻结基线时间窗、产品组合、分母、异常剔除和财务确认规则。",
+        "mitigation_en": "Freeze the baseline window, product mix, denominator, exclusions, and finance sign-off rules.",
+        "relevance_score": 17,
+        "priority_rank": 6,
+        "highlighted": false
+      },
+      {
+        "risk_id": "H03",
+        "category": "workforce",
+        "category_zh": "人力",
+        "category_en": "Workforce",
+        "title_zh": "自动建议的授权、确认和安全责任边界不清",
+        "title_en": "Unclear authority, confirmation, and safety accountability for automated recommendations",
+        "pcio_layers": [
+          "O",
+          "H"
+        ],
+        "driver_matches": [
+          "quality_defects"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Plan/Act",
+        "mitigation_zh": "明确建议、批准、执行、回退和审计责任；安全相关动作必须由合格人员确认。",
+        "mitigation_en": "Define recommendation, approval, execution, rollback, and audit ownership; qualified personnel confirm safety actions.",
+        "relevance_score": 15,
+        "priority_rank": 7,
+        "highlighted": false
+      },
+      {
+        "risk_id": "T01",
+        "category": "technical",
+        "category_zh": "技术",
+        "category_en": "Technical",
+        "title_zh": "关键测点覆盖、校准或数据完整性不足",
+        "title_en": "Insufficient critical-tag coverage, calibration, or completeness",
+        "pcio_layers": [
+          "P"
+        ],
+        "driver_matches": [
+          "quality_defects"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Plan/Do",
+        "mitigation_zh": "冻结关键测点清单，记录量程、单位、校准、缺失和责任人；先补瓶颈设备。",
+        "mitigation_en": "Freeze the critical-tag list and record range, unit, calibration, missingness, and ownership; start with bottleneck assets.",
+        "relevance_score": 15,
+        "priority_rank": 8,
+        "highlighted": false
+      },
+      {
+        "risk_id": "T02",
+        "category": "technical",
+        "category_zh": "技术",
+        "category_en": "Technical",
+        "title_zh": "采集链路中断、延迟或网络隔离不足",
+        "title_en": "Collection interruption, latency, or inadequate network segregation",
+        "pcio_layers": [
+          "C"
+        ],
+        "driver_matches": [
+          "manual_records"
+        ],
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "band": "critical",
+        "band_zh": "极高",
+        "band_en": "Critical",
+        "color": "#E06666",
+        "pdca_stage": "Do/Check",
+        "mitigation_zh": "建立断点续传、链路健康监控和网络分区；保留人工回退与本地缓存。",
+        "mitigation_en": "Use store-and-forward, link-health monitoring, and network segmentation with manual fallback and local buffering.",
+        "relevance_score": 15,
+        "priority_rank": 9,
+        "highlighted": false
+      },
+      {
+        "risk_id": "E02",
+        "category": "external",
+        "category_zh": "外部",
+        "category_en": "External",
+        "title_zh": "本地备件、校准或运维支持响应不足",
+        "title_en": "Insufficient local spare-parts, calibration, or maintenance response",
+        "pcio_layers": [
+          "P",
+          "C"
+        ],
+        "driver_matches": [],
+        "likelihood": 3,
+        "impact": 2,
+        "score": 6,
+        "band": "moderate",
+        "band_zh": "中",
+        "band_en": "Moderate",
+        "color": "#FFE699",
+        "pdca_stage": "Plan/Do",
+        "mitigation_zh": "确定关键备件、校准周期、服务等级和本地替代方案，并纳入总拥有成本。",
+        "mitigation_en": "Define critical spares, calibration cycles, service levels, and local alternatives in total cost of ownership.",
+        "relevance_score": 7,
+        "priority_rank": 10,
+        "highlighted": false
+      }
+    ],
+    "matrix": [
+      {
+        "likelihood": 4,
+        "cells": [
+          {
+            "likelihood": 4,
+            "impact": 1,
+            "score": 4,
+            "band": "moderate",
+            "color": "#FFE699",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 4,
+            "impact": 2,
+            "score": 8,
+            "band": "high",
+            "color": "#F4B183",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 4,
+            "impact": 3,
+            "score": 12,
+            "band": "critical",
+            "color": "#E06666",
+            "risk_ids": [
+              "O03",
+              "T03",
+              "E01",
+              "H01",
+              "O01",
+              "O02",
+              "H03",
+              "T01",
+              "T02"
+            ]
+          },
+          {
+            "likelihood": 4,
+            "impact": 4,
+            "score": 16,
+            "band": "critical",
+            "color": "#E06666",
+            "risk_ids": []
+          }
+        ]
+      },
+      {
+        "likelihood": 3,
+        "cells": [
+          {
+            "likelihood": 3,
+            "impact": 1,
+            "score": 3,
+            "band": "low",
+            "color": "#C6E0B4",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 3,
+            "impact": 2,
+            "score": 6,
+            "band": "moderate",
+            "color": "#FFE699",
+            "risk_ids": [
+              "E02"
+            ]
+          },
+          {
+            "likelihood": 3,
+            "impact": 3,
+            "score": 9,
+            "band": "high",
+            "color": "#F4B183",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 3,
+            "impact": 4,
+            "score": 12,
+            "band": "critical",
+            "color": "#E06666",
+            "risk_ids": []
+          }
+        ]
+      },
+      {
+        "likelihood": 2,
+        "cells": [
+          {
+            "likelihood": 2,
+            "impact": 1,
+            "score": 2,
+            "band": "low",
+            "color": "#C6E0B4",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 2,
+            "impact": 2,
+            "score": 4,
+            "band": "moderate",
+            "color": "#FFE699",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 2,
+            "impact": 3,
+            "score": 6,
+            "band": "moderate",
+            "color": "#FFE699",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 2,
+            "impact": 4,
+            "score": 8,
+            "band": "high",
+            "color": "#F4B183",
+            "risk_ids": []
+          }
+        ]
+      },
+      {
+        "likelihood": 1,
+        "cells": [
+          {
+            "likelihood": 1,
+            "impact": 1,
+            "score": 1,
+            "band": "low",
+            "color": "#C6E0B4",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 1,
+            "impact": 2,
+            "score": 2,
+            "band": "low",
+            "color": "#C6E0B4",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 1,
+            "impact": 3,
+            "score": 3,
+            "band": "low",
+            "color": "#C6E0B4",
+            "risk_ids": []
+          },
+          {
+            "likelihood": 1,
+            "impact": 4,
+            "score": 4,
+            "band": "moderate",
+            "color": "#FFE699",
+            "risk_ids": []
+          }
+        ]
+      }
+    ],
+    "category_counts": {
+      "organisational": 3,
+      "technical": 3,
+      "external": 2,
+      "workforce": 2
+    },
+    "band_counts": {
+      "critical": 9,
+      "moderate": 1
+    }
+  },
+  "kpis": [
+    {
+      "kpi_id": "KPI-B-05",
+      "pcio_layer": "I",
+      "name_zh": "人工重复记录时间",
+      "name_en": "Duplicate manual recording time",
+      "unit": "% reduction",
+      "current_maturity_score": 2.576800847457627,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 15,
+      "target_high": 30,
+      "direction": "lower",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "数字化上线时同步取消等量重复纸质步骤。",
+      "rationale_en": "Retire equivalent duplicate paper steps when digital capture goes live.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "Toolkit planning scenario (P)",
+      "priority_score": 7.246398305084746,
+      "priority_rank": 1,
+      "priority": "urgent"
+    },
+    {
+      "kpi_id": "KPI-B-04",
+      "pcio_layer": "O",
+      "name_zh": "返工/缺陷率",
+      "name_en": "Rework or defect rate",
+      "unit": "% reduction",
+      "current_maturity_score": 2.6725127551020407,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 5,
+      "target_high": 10,
+      "direction": "lower",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "保持产品组合和检验口径一致。",
+      "rationale_en": "Hold product mix and inspection definitions constant.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "Toolkit planning scenario (P)",
+      "priority_score": 7.054974489795919,
+      "priority_rank": 2,
+      "priority": "urgent"
+    },
+    {
+      "kpi_id": "KPI-B-06",
+      "pcio_layer": "P",
+      "name_zh": "瓶颈设备状态感知覆盖率",
+      "name_en": "State-sensing coverage for bottleneck assets",
+      "unit": "%",
+      "current_maturity_score": 2.776721014492754,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 90,
+      "target_high": 95,
+      "direction": "higher",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "柔性较低时先补齐设备状态、节拍、等待和停机原因，而不是直接上排产 AI。",
+      "rationale_en": "When flexibility is low, capture state, cycle, waiting, and downtime reasons before scheduling AI.",
+      "expected_outcome_zh": "柔性绩效问卷分数试点提升 0.2-0.5/5，须与换产/等待时间交叉验证。",
+      "expected_outcome_en": "Pilot flexibility-score improvement of 0.2-0.5/5, triangulated with changeover or waiting time.",
+      "evidence": "External n=52 sensor-priority reference + toolkit scenario (P)",
+      "priority_score": 6.846557971014493,
+      "priority_rank": 3,
+      "priority": "urgent"
+    },
+    {
+      "kpi_id": "KPI-I-01",
+      "pcio_layer": "I",
+      "name_zh": "关键测点与设备/批次/工单映射完整率",
+      "name_en": "Completeness of tag-to-asset/batch/work-order mapping",
+      "unit": "%",
+      "current_maturity_score": 2.576800847457627,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 90,
+      "target_high": 95,
+      "direction": "higher",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "当前集成能力决定统计结果能否回到具体业务情境。",
+      "rationale_en": "Integration determines whether analysis can be traced back to business context.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "Toolkit operating target (P)",
+      "priority_score": 4.246398305084746,
+      "priority_rank": 4,
+      "priority": "high"
+    },
+    {
+      "kpi_id": "KPI-O-01",
+      "pcio_layer": "O",
+      "name_zh": "异常闭环按期完成率",
+      "name_en": "On-time exception closure rate",
+      "unit": "%",
+      "current_maturity_score": 2.6725127551020407,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 80,
+      "target_high": 90,
+      "direction": "higher",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "优化层先验证规则和行动闭环，再进入高级模型。",
+      "rationale_en": "Optimisation should validate rules and action closure before advanced models.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "Toolkit operating target (P)",
+      "priority_score": 4.054974489795919,
+      "priority_rank": 5,
+      "priority": "high"
+    },
+    {
+      "kpi_id": "KPI-P-01",
+      "pcio_layer": "P",
+      "name_zh": "关键测点有效覆盖率",
+      "name_en": "Valid coverage of critical tags",
+      "unit": "%",
+      "current_maturity_score": 2.776721014492754,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 90,
+      "target_high": 95,
+      "direction": "higher",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "感知层是后续连接、集成和优化的输入门槛。",
+      "rationale_en": "Perception is the input gate for connectivity, integration, and optimisation.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "External n=52 Sensor_Inf=4.5077 reference + project score",
+      "priority_score": 3.8465579710144926,
+      "priority_rank": 6,
+      "priority": "high"
+    },
+    {
+      "kpi_id": "KPI-H-01",
+      "pcio_layer": "H",
+      "name_zh": "目标岗位任务验证通过率",
+      "name_en": "Task-based competence pass rate for target roles",
+      "unit": "%",
+      "current_maturity_score": 2.861530172413793,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 90,
+      "target_high": 95,
+      "direction": "higher",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "培训完成不等于会用，以真实任务验证人机协同能力。",
+      "rationale_en": "Training completion is not competence; verify with real tasks.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "Toolkit operating target (P)",
+      "priority_score": 3.676939655172414,
+      "priority_rank": 7,
+      "priority": "medium"
+    },
+    {
+      "kpi_id": "KPI-C-01",
+      "pcio_layer": "C",
+      "name_zh": "试点数据采集可用率",
+      "name_en": "Pilot data-acquisition availability",
+      "unit": "%",
+      "current_maturity_score": 2.7857142857142856,
+      "operational_baseline": "现场数据待确认 / Operational baseline required",
+      "target_low": 97,
+      "target_high": 99,
+      "direction": "higher",
+      "horizon": "12 weeks / 12周试点",
+      "rationale_zh": "用链路可用率代替“已联网”这一不可审计描述。",
+      "rationale_en": "Use measurable link availability rather than a binary 'connected' claim.",
+      "expected_outcome_zh": "",
+      "expected_outcome_en": "",
+      "evidence": "Toolkit operating target (P)",
+      "priority_score": 2.828571428571429,
+      "priority_rank": 8,
+      "priority": "medium"
+    }
+  ],
+  "roi": {
+    "inputs": {
+      "currency": "CNY",
+      "investment": 180000,
+      "annual_addressable_value": 1500000,
+      "annual_operating_cost": 30000,
+      "improvement_low_pct": 5.0,
+      "improvement_high_pct": 10.0,
+      "horizon_years": 3
+    },
+    "scenarios": [
+      {
+        "scenario": "conservative",
+        "improvement_pct": 5.0,
+        "annual_gross_benefit": 75000.0,
+        "annual_net_benefit": 45000.0,
+        "payback_months": 48.0,
+        "roi_3y_pct": -25.0
+      },
+      {
+        "scenario": "base",
+        "improvement_pct": 7.5,
+        "annual_gross_benefit": 112500.0,
+        "annual_net_benefit": 82500.0,
+        "payback_months": 26.18181818181818,
+        "roi_3y_pct": 37.5
+      },
+      {
+        "scenario": "optimistic",
+        "improvement_pct": 10.0,
+        "annual_gross_benefit": 150000.0,
+        "annual_net_benefit": 120000.0,
+        "payback_months": 18.0,
+        "roi_3y_pct": 100.0
+      }
+    ],
+    "payback_range_months": {
+      "optimistic": 18.0,
+      "conservative": 48.0
+    },
+    "break_even_improvement_pct": 6.0,
+    "interpretation_zh": "回收期为简单静态估算，未计税、折旧、资金成本、停产损失或爬坡曲线。",
+    "interpretation_en": "Payback is a simple static estimate excluding tax, depreciation, cost of capital, downtime, and ramp-up."
+  },
+  "evidence_boundary": {
+    "zh": "风险分数和 KPI/ROI 区间用于筛选与立项，不构成安全结论、预算报价或收益承诺。",
+    "en": "Risk scores and KPI/ROI ranges support screening and approval; they are not safety conclusions, price quotes, or benefit guarantees."
+  }
+}
