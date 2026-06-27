@@ -1,7 +1,0 @@
-﻿scale,item_set,alpha,n,items,status,missing_rule
-P,active_company,0.9798223560863544,60,69,ok,respondent >=80% complete; remaining cells item-mean imputed
-C,active_company,0.9646935091071168,60,49,ok,respondent >=80% complete; remaining cells item-mean imputed
-I,active_company,0.9808577763587236,60,59,ok,respondent >=80% complete; remaining cells item-mean imputed
-O,active_company,0.9805485135898829,60,49,ok,respondent >=80% complete; remaining cells item-mean imputed
-H,active_company,0.9510699925639302,60,29,ok,respondent >=80% complete; remaining cells item-mean imputed
-R,performance_4_items,0.707041945022451,60,4,ok,respondent >=80% complete; remaining cells item-mean imputed
